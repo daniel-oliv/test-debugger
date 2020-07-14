@@ -1,0 +1,19 @@
+{
+  "name": "test-debbuger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clear": "npx rimraf ./dist",
+    "build-npx": "npx tsc",
+    "clear-build": "npm run clear && npm run build-npx",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "rimraf": "^3.0.2",
+    "ts-node": "^8.10.1",
+    "typescript": "^3.9.3"
+  }
+}
