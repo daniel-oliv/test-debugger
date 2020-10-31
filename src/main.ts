@@ -1,3 +1,13 @@
+export const exportedConstant = 'I am a exported!'
+export var exportedVariable = 'I am a exported too!'
+
+const internalConstant = 'I am NOT exported!'
+var internalVariable = 'I am a NOT exported too!'
+
+export function fun(){
+  return 'I am a exported function'
+}
+
 export class Main {
   
   constructor(){
@@ -12,7 +22,21 @@ export class Main {
     }
   }
   async testDebbuger(){
-   console.log("Put a breakpoint here and press F10 or click in 'Step Over' sequecially until open a internal node file")
+    console.log(exportedConstant);
+    console.log(exportedVariable);
+
+    console.log(internalConstant);
+    console.log(internalVariable);
+
+    console.log(fun());
+
+    console.log(`
+    Put a breakpoint here 
+    and try to watch the exported elements, const and var, 
+    or put the mouse over than.
+    Just the non-exported var and const are available to debug. 
+    Although they are printed in DEBUG CONSOLE and exported function is available too
+    Thanks for all!`)
    return true;
   }
 
